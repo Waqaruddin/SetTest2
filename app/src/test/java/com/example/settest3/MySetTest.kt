@@ -159,7 +159,10 @@ class MySetTest {
     fun test13() {
         val mySet = MySet()
 
-        val actual = mySet.addAll()
+//        val list = arrayListOf<Int>()
+//        list.addAll(listOf(1,2,3,4))
+
+        val actual = mySet.addAll(listOf(1,2,3,4))
         val expected = false
         assertEquals(expected, actual)
     }

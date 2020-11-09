@@ -49,7 +49,6 @@ class MySet {
     fun remove(element: Int): Boolean {
         //if element present
         //remove it and return true
-
         if (data.contains(element)) {
             val newData = data.toMutableList()
             newData.remove(element)
@@ -59,5 +58,9 @@ class MySet {
         //if element not present
         //remove should return false
         return false
+    }
+
+    fun addAll(listOf: List<Int>): Boolean {
+
     }
 }

@@ -14,7 +14,6 @@ class MySet {
         //contains method should return true if element already exists
         //
 
-
         if (data.contains(element)) {
             return false
         } else {
@@ -60,7 +59,20 @@ class MySet {
         return false
     }
 
-    fun addAll(listOf: List<Int>): Boolean {
+    fun addAll(arrayOf: Array<Int>): Boolean {
 
+        for(i in arrayOf){
+            if (data.contains(i)) {
+                return false
+            } else {
+                val newData: Array<Int?> = data.copyOf(data.size + 1)
+                data = newData
+                data[data.size - 1] = i
+            }
+        }
+
+        return true
     }
+
+
 }
